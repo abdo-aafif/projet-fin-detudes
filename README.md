@@ -2,7 +2,7 @@
 
 Ce module étend les fonctionnalités natives d'Odoo 17 Community pour répondre aux exigences de la comptabilité générale marocaine (PCGE), en facilitant la saisie des écritures, la gestion de la TVA et les déclarations fiscales.
 
-## 🌟 Fonctionnalités Principales
+##  Fonctionnalités Principales
 
 ### 1. Plan Comptable et Configuration
 * Configuration et personnalisation du plan comptable (PCGE marocain par défaut).
@@ -23,7 +23,7 @@ Ce module étend les fonctionnalités natives d'Odoo 17 Community pour répondre
 * Assistant complet d'analyse historique et de calcul de la TVA (Encaissements).
 * **Export pour télédéclaration SIMPL-TVA (DGI)** : Génération automatique du fichier XML prêt à être téléversé sur le portail de la Direction Générale des Impôts (DGI).
 
-## 🚀 Installation
+##  Installation
 
 1. Clonez ce dépôt ou décompressez l'archive dans le répertoire des addons de votre instance Odoo 17.
 2. Assurez-vous d'avoir installé les dépendances natives suivantes (gérées automatiquement lors de l'installation de ce module) :
@@ -35,12 +35,12 @@ Ce module étend les fonctionnalités natives d'Odoo 17 Community pour répondre
 5. Allez dans *Applications* > *Mise à jour de la liste des applications*.
 6. Recherchez "Comptabilité OMEGASOFT" et cliquez sur **Activer**.
 
-## 💻 Utilisation
+##  Utilisation
 
 * **Menu Comptabilité** : Un menu principal "Comptabilité" est ajouté au menu racine d'Odoo. Ce menu centralise l'accès aux écritures manuelles, récurrentes, et lettrage.
 * **Écritures Récurrentes** : Accessibles via `Comptabilité > Écritures Récurrentes`. Permet de générer des écritures de loyers ou d'abonnements à des intervalles réguliers.
 * **TVA & SIMPL-TVA** : Accessibles via `Comptabilité > Déclarations Fiscales`. Un tableau de bord permet d'analyser les montants collectés/déductibles et un assistant `"Export XML"` permet de générer le fichier de télédéclaration.
 
-## 📝 Licence
+##  Licence
 
 Ce module est distribué sous la licence [LGPL-3](https://www.gnu.org/licenses/lgpl-3.0.html).
