@@ -1,5 +1,5 @@
 {
-    'name': 'GEMINIIII',
+    'name': 'Comptabilité OMEGASOFT',
     'version': '17.0.1.0.0',
     'category': 'Accounting',
     'summary': 'Plan comptable PCGE marocain, écritures comptables, lettrage, contre-passation, écritures récurrentes',
@@ -29,7 +29,7 @@ Fonctionnalités :
     'data': [
         'security/ir.model.access.csv',
         'security/compta_security.xml',
-        #'data/journal_data.xml',
+        'data/journal_data.xml',
         'wizard/simpl_tva_wizard_views.xml',
         'views/compta_overrides.xml',
         'views/account_tva_declaration_views.xml',
