@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- DÉBRIDAGE ODOO COMMUNITY : 
+             Forcer l'affichage des "Caractéristiques comptables complètes" (Débit/Crédit, Journaux, etc.)
+             pour tous les utilisateurs qui ont accès à la facturation/comptabilité. -->
+             
+        <record id="account.group_account_invoice" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user')), (4, ref('account.group_account_readonly'))]"/>
+        </record>
+        
+        <record id="account.group_account_manager" model="res.groups">
+            <field name="implied_ids" eval="[(4, ref('account.group_account_user')), (4, ref('account.group_account_readonly'))]"/>
+        </record>
+    </data>
+</odoo>

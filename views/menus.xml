@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 1. Menu Principal (Racine) : Accessible uniquement pour les comptables et conseillers -->
+    <menuitem id="menu_comptabilite_maroc_root" 
+              name="Comptabilité" 
+              sequence="10" 
+              groups="account.group_account_user,account.group_account_manager"
+              web_icon="account,static/description/icon.png"/>
+
+    <!-- 2. Menu Tableau de bord -->
+    <menuitem id="menu_compta_dashboard" 
+              name="Tableau de bord" 
+              parent="menu_comptabilite_maroc_root" 
+              action="account.open_account_journal_dashboard_kanban" 
+              sequence="1"/>
+
+    <!-- 3. Menu Comptabilité (Saisie) -->
+    <menuitem id="menu_compta_accounting" 
+              name="Comptabilité" 
+              parent="menu_comptabilite_maroc_root" 
+              sequence="4"/>
+              
+    <menuitem id="menu_compta_journal_entries" 
+              name="Pièces comptables (Saisie Manuelle)" 
+              parent="menu_compta_accounting" 
+              action="action_compta_saisie_manuelle" 
+              sequence="1"/>
+              
+    <menuitem id="menu_compta_journal_items" 
+              name="Lignes d'écritures (Grand Livre de base)" 
+              parent="menu_compta_accounting" 
+              action="account.action_account_moves_all" 
+              sequence="2"/>
+              
+    <!-- AJOUT : ÉCRITURES RÉCURRENTES (Personnalisé car absent de Community) -->
+    <menuitem id="menu_compta_recurring" 
+              name="Écritures Récurrentes (Abonnements)" 
+              parent="menu_compta_accounting" 
+              action="action_account_recurring" 
+              sequence="3"/>
+              
+    <!-- AJOUT : LETTRAGE (Accès rapide aux écritures non lettrées) -->
+    <menuitem id="menu_compta_lettrage" 
+              name="Lettrage (Nouvelle Réconciliation)" 
+              parent="menu_compta_accounting" 
+              action="account.action_account_moves_all_a" 
+              sequence="4"/>
+
+    <!-- 4. Menu Ventes & Achats (Accès rapide aux factures) -->
+    <menuitem id="menu_compta_ventes" 
+              name="Ventes" 
+              parent="menu_comptabilite_maroc_root" 
+              sequence="2"/>
+    <menuitem id="menu_compta_factures_clients" 
+              name="Factures Clients" 
+              parent="menu_compta_ventes" 
+              action="account.action_move_out_invoice_type" 
+              sequence="1"/>
+
+    <menuitem id="menu_compta_achats" 
+              name="Achats" 
+              parent="menu_comptabilite_maroc_root" 
+              sequence="3"/>
+    <menuitem id="menu_compta_factures_fournisseurs" 
+              name="Factures Fournisseurs" 
+              parent="menu_compta_achats" 
+              action="account.action_move_in_invoice_type" 
+              sequence="1"/>
+
+    <!-- 5. Menu Configuration (Plan comptable, Journaux, Taxes) -->
+    <menuitem id="menu_compta_configuration" 
+              name="Configuration" 
+              parent="menu_comptabilite_maroc_root" 
+              sequence="100"/>
+              
+    <menuitem id="menu_compta_coa" 
+              name="Plan Comptable" 
+              parent="menu_compta_configuration" 
+              action="account.action_account_form" 
+              sequence="1"/>
+              
+    <menuitem id="menu_compta_journals" 
+              name="Journaux Comptables" 
+              parent="menu_compta_configuration" 
+              action="account.action_account_journal_form" 
+              sequence="2"/>
+              
+    <!-- AJOUT : Accès rapide aux paramètres de la comptabilité -->
+    <menuitem id="menu_compta_parametres" 
+              name="Paramètres (Régime TVA, etc.)" 
+              parent="menu_compta_configuration" 
+              action="account.action_account_config" 
+              sequence="3"/>
+              
+    <!-- AJOUT POUR LA COMPTABILITÉ ANALYTIQUE (PROJETS/COÛTS) -->
+    <menuitem id="menu_compta_analytique" 
+              name="Comptes Analytiques (Projets)" 
+              parent="menu_compta_configuration" 
+              action="analytic.action_analytic_account_form" 
+              sequence="4"/>
+              
+    <menuitem id="menu_compta_taxes" 
+              name="Taxes (TVA Marocaine)" 
+              parent="menu_compta_configuration" 
+              action="account.action_tax_form" 
+              sequence="5"/>
+    <!-- 7. Menu Déclarations Fiscales (TVA & SIMPL-TVA) -->
+    <menuitem id="menu_compta_fiscal" 
+              name="Déclarations Fiscales" 
+              parent="menu_comptabilite_maroc_root" 
+              sequence="6"/>
+              
+    <menuitem id="menu_compta_fiscal_tva_dashboard" 
+              name="Historique &amp; Calcul TVA (Encaissements)" 
+              parent="menu_compta_fiscal" 
+              action="action_account_tva_declaration" 
+              sequence="1"/>
+              
+    <menuitem id="menu_compta_fiscal_tva_xml" 
+              name="Export XML (SIMPL-TVA DGI)" 
+              parent="menu_compta_fiscal" 
+              action="action_simpl_tva_wizard" 
+              sequence="2"/>
+              
+</odoo>
+
