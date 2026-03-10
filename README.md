@@ -27,13 +27,13 @@ Ce module étend les fonctionnalités natives d'Odoo 17 Community pour répondre
 
 1. Clonez ce dépôt ou décompressez l'archive dans le répertoire des addons de votre instance Odoo 17.
 2. Assurez-vous d'avoir installé les dépendances natives suivantes (gérées automatiquement lors de l'installation de ce module) :
-   * `account` (Comptabilité)
    * `l10n_ma` (Localisation Maroc - Vient avec le Plan Comptable)
-   * `analytic` (Comptabilité analytique)
-3. Redémarrez le service Odoo (`sudo service odoo restart` ou equivalent).
+   Si votre plan comptable n'est pas marocain, vous pouvez le modifier dans le fichier `__manifest__.py`.  
+   Par exemple, vous pouvez utiliser un plan comptable français (`l10n_fr`).
+3. Redémarrez le service Odoo.
 4. Connectez-vous en tant qu'administrateur, activez le **Mode Développeur**.
 5. Allez dans *Applications* > *Mise à jour de la liste des applications*.
-6. Recherchez "GEMINIIII" ou "Comptabilité Marocaine" et cliquez sur **Activer**.
+6. Recherchez "Comptabilité OMEGASOFT" et cliquez sur **Activer**.
 
 ## 💻 Utilisation
 
